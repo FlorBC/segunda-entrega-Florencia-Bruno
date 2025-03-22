@@ -1,4 +1,4 @@
-/* Reset */
+/* GENERAL */
 * {
     margin: 0;
     padding: 0;
@@ -9,21 +9,21 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* CONTENEDOR PRINCIPAL DE HEADER */
+/*CONTENEDOR PRINCIPAL DE HEADER*/
 header {
     width: 100%;
 }
 
-/* CONTENEDOR DEL LOGO, TITULO Y MENÚ */
+/*CONTENEDOR DEL LOGO, TITULO Y MENÚ*/
 .container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Alinea el logo, título y menú */
+    justify-content: space-between; /*Alinea el logo, título y menú*/
     background-color: black;
     padding: 15px 20px;
 }
 
-/* LOGO */
+/*LOGO*/
 header img {
     height: 120px;
     width: auto;
@@ -41,7 +41,7 @@ header img {
 
 /* Alineación del menú en dispositivos grandes */
 .menu {
-    margin-left: auto; /* Alinea el menú a la derecha */
+    margin-left: auto; 
 }
 
 .menu li {
@@ -62,14 +62,14 @@ header img {
 
 /* MENÚ HAMBURGUESA (RESPONSIVO) */
 .menu-hamburguesa {
-    display: none; /* Ocultamos el ícono en pantallas grandes */
+    display: none; /* OcultO el ícono en pantallas grandes */
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
     width: 30px;
     height: 20px;
     justify-content: space-between;
-    z-index: 999; /* Asegura que el menú hamburguesa esté por encima del encabezado */
+    z-index: 999; /* para que el menú hamburguesa esté por encima del encabezado xq sino me lo tapa */
 }
 
 .menu-hamburguesa span {
@@ -83,21 +83,21 @@ header img {
 /* Estilos cuando la pantalla es pequeña */
 @media (max-width: 768px) {
     .menu {
-        display: none; /* Ocultamos el menú en pantallas pequeñas */
+        display: none; /* Oculto el menú en pantallas pequeñas */
         flex-direction: column;
         gap: 15px;
         width: 100%;
         background-color: black;
         position: absolute;
-        top: 60px; /* Coloca el menú justo debajo del encabezado */
+        top: 60px; /* Coloco el menú abajo del encabezado */
         left: 0;
         padding: 20px;
         border-radius: 10px;
-        z-index: 998; /* Asegura que el menú esté por debajo del menú hamburguesa */
+        z-index: 998; /* para que el menú esté por debajo del menú hamburguesa */
     }
 
     .menu.show {
-        display: flex; /* Mostramos el menú cuando está activo */
+        display: flex; /* muestra el menú cuando está activo */
     }
 
     .menu li {
@@ -105,7 +105,7 @@ header img {
     }
 
     .menu-hamburguesa {
-        display: flex; /* Mostramos el ícono del menú hamburguesa */
+        display: flex; /* muestra el ícono del menú hamburguesa */
     }
 }
 
@@ -114,15 +114,15 @@ header img {
     color: white;
     background-color: black;
     padding: 10px 20px;
-    font-size: 32px; /* Tamaño de letra mayor */
+    font-size: 32px; 
     font-weight: bold;
-    text-align: left; /* Alineación a la izquierda */
+    text-align: left; /* a la izquierda */
     flex-grow: 1;
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 1px;
 }
 
-/* ESTILO PARA EL TITULO NUEVO CON ANIMACIÓN */
+/* ESTILO PARA TITULO CON MOVIMIENTO */
 .nuevo-titulo {
     text-align: center;
     background-color: white;
@@ -216,7 +216,7 @@ footer h3 {
     color: #ff5733;
 }
 
-/* Estilos para la página de tarifas */
+/* ESTILO PARA PAGINAS TARIFAS */
 .tarifas {
     display: flex;
     justify-content: center;
@@ -226,7 +226,7 @@ footer h3 {
 
 .tarifa {
     display: flex;
-    align-items: center; /* Alinea la imagen y el párrafo verticalmente */
+    align-items: center; 
     gap: 20px; /* Espacio entre la imagen y el párrafo */
 }
 
@@ -241,7 +241,7 @@ footer h3 {
     line-height: 1.6;
 }
 
-/* Estilo para el título de "Nuestro Equipo" */
+/* EESTILO PARA NUESTRO EQUIPO*/
 .titulo-equipo {
     text-align: center;
     font-size: 28px;
@@ -250,14 +250,14 @@ footer h3 {
     margin-bottom: 30px;
 }
 
-/* Estilo para la grilla de equipo */
+/* GRILLA DE EQUIPO */
 .equipo-grilla {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
     gap: 20px;
     justify-items: center; /* Centra los elementos dentro de cada celda */
     margin: 0 auto;
-    width: 80%; /* Ajusta el ancho de la grilla */
+    width: 80%; /* para ajustar el ancho de la grilla */
 }
 
 .equipo-grilla .miembro {
@@ -277,7 +277,7 @@ footer h3 {
     font-weight: normal;
 }
 
-/* Estilo para el formulario de contacto */
+/* ESTILO PARA FORMULARIO DE CONTACTO */
 .contacto {
     display: flex;
     justify-content: center;
@@ -311,9 +311,9 @@ footer h3 {
     resize: vertical; /* Permite cambiar el tamaño verticalmente */
 }
 
-/* Cambios en el botón */
+/* BOTON */
 .contact-form button {
-    background-color: #ccc; /* Fondo gris */
+    background-color: #ccc; 
     color: black; /* Texto negro */
     border: none;
     padding: 10px;
@@ -321,18 +321,18 @@ footer h3 {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
-    width: auto; /* Ancho menor */
-    margin: 0 auto; /* Centramos el botón */
-    display: block; /* Asegura que el botón sea un bloque y se centre */
+    width: auto; 
+    margin: 0 auto; /* para centar el botón */
+    display: block; /* para que el botón sea un bloque y se centre */
 }
 
 .contact-form button:hover {
     background-color: #b8b8b8; /* Fondo gris oscuro al hacer hover */
 }
 
-/* Estilos específicos para la página de Galería de Eventos */
 
-/* TÍTULO "GALLERÍA DE EVENTOS" */
+
+/* TÍTULO GALLERÍA DE EVENTOS */
 .titulo-galeria {
     text-align: center;
     background-color: white;
@@ -350,7 +350,7 @@ footer h3 {
 /* GRILLA DE IMÁGENES */
 .galeria-imagenes .imagenes-portafolio {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
     gap: 20px;
     justify-items: center;
     padding: 20px;
@@ -368,7 +368,7 @@ footer h3 {
 /* GRILLA DE VIDEOS */
 .galeria-videos .videos-portafolio {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta la cantidad de videos por fila */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* para ajustar la cantidad de videos por fila */
     gap: 20px;
     justify-items: center;
     padding: 20px;
