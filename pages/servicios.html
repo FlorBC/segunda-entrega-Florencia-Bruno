@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Común -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Font Awesome para los iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!--------------ESTILO FUENTE EN INDEX SERVICIOS PARA FIESTAS Y EVENTOS----------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!--------------------BOOTSTRAP------------------------>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEJ04KxjO5YHVayZnKrg7A9pHo63cEUGLMFZDRz8zlmhF5YHKn2f7E3B9F6a1" crossorigin="anonymous">
+
+    <title>Servicios - Box Salto</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <img src="../assets/img/boxsalto.jpeg" alt="Logo"><!---------LOGO---------->
+
+            <!-- Título -->
+            <h1 class="titulo-servicios">SERVICIOS PARA FIESTAS Y EVENTOS</h1>
+
+            <!-- MENÚ HAMBURGUESA -->
+            <div class="menu-hamburguesa" id="menu-hamburguesa">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Menú con el mismo estilo de index -->
+            <ul class="menu" id="navbarNav">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tarifas.html">Tarifas</a></li>
+                <li><a href="quienessomos.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="galeria.html">Galería de eventos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Encabezado de la sección de servicios -->
+    <h2 class="nuevo-titulo">Conoce nuestros servicios</h2>
+
+    <main>
+        <section>
+            <p>FOTOBOX SALTO brinda una experiencia única y divertida para llevar tus fiestas a otro nivel. Contamos con
+                gran
+                variedad de servicios para recibir y entretener en tus eventos y fiestas.
+            </p>
+        </section>
+
+        <section class="servicios">
+            <!-- Servicios de entretenimiento -->
+            <div class="servicio">
+                <h3>SERVICIOS DE ENTRETENIMIENTO</h3>
+                <img src="../assets/img/plataforma360.jpeg" alt="plataforma360">
+                <img src="../assets/img/glowybox (1).jpeg" alt="glowybox">
+                <img src="../assets/img/englowy.jpeg" alt="englowy">
+            </div>
+
+            <!-- Servicios de recibimiento -->
+            <div class="servicio">
+                <h3>SERVICIOS DE RECIBIMIENTO</h3>
+                <img src="../assets/img/cabinavogue (1).jpeg" alt="cabinavogue">
+                <img src="../assets/img/enespejomagico.jpeg" alt="espejomagico">
+                <img src="../assets/img/enespejomagico.jpeg" alt="enespejomagico">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer con redes sociales -->
+    <footer>
+        <h3>Síguenos en nuestras redes sociales</h3>
+        <div class="social-links">
+            <a href="https://www.instagram.com/box.salto?igsh=eXFuNTZhY2tvenJk" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.facebook.com/share/1GcjugkvbC/?mibextid=wwXIfr" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqJt5OLJpc8r+19dJ3FE1PU8z9/vJAd+Y6/76U91zHgW0"
+        crossorigin="anonymous"></script>
+    <script>
+        // Script para controlar el menú hamburguesa
+        const menuHamburguesa = document.getElementById('menu-hamburguesa');
+        const navbarNav = document.getElementById('navbarNav');
+
+        menuHamburguesa.addEventListener('click', function () {
+            navbarNav.classList.toggle('show');
+            menuHamburguesa.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>
