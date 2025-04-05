@@ -1,13 +1,9 @@
-// main.scss
 
-@use 'variables';
-@use 'general';
-@use 'index';
-@use 'servicios';
-@use 'tarifas';
-@use 'contacto';
-@use 'quienessomos';
-@use 'galeria';
-
-
+@use './base/general';
+@use './components/menu';
+@use './components/footer';
+@use './pages/contacto';
+@use './pages/galeria';
+@use './pages/quienessomos';
+@use './pages/tarifas';
 

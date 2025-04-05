@@ -1,8 +1,0 @@
-// _index.scss
-@use 'general' as *;  // Esto importa '_general.scss'
-
-h2.nuevo-titulo {
-    font-family: $font-primary;  // Usando la variable de '_variables.scss' a través de '_general.scss'
-    font-size: 2rem;
-    color: $color-primary;
-}

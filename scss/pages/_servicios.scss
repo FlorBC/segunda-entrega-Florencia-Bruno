@@ -1,0 +1,49 @@
+/* SECCIÓN SERVICIOS */
+.servicios {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas de servicio se ajusten en filas */
+    justify-content: space-between;
+    gap: 30px;
+    text-align: center;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    width: 48%; /* Asegura que las tarjetas de servicio ocupen solo el 48% del contenedor */
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.servicio h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+/* Ajustes para las imágenes dentro de las tarjetas de servicio */
+.servicio img {
+    width: 100%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+    max-width: 250px; /* Limita el tamaño máximo de las imágenes a 250px */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block;
+    margin: 0 auto; /* Centra las imágenes dentro de las tarjetas */
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+    .servicio {
+        width: 100%; /* En pantallas pequeñas, las tarjetas ocupan todo el contenedor */
+    }
+
+    .servicios {
+        flex-direction: column; /* Las tarjetas se apilan en columnas en pantallas pequeñas */
+        align-items: center;
+    }
+}

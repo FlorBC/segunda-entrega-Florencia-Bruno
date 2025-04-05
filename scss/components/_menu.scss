@@ -1,0 +1,140 @@
+
+/*CONTENEDOR PRINCIPAL DE HEADER*/
+header {
+    width: 100%;
+}
+
+/*CONTENEDOR DEL LOGO, TITULO Y MENÚ*/
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*Alinea el logo, título y menú*/
+    background-color: black;
+    padding: 15px 20px;
+}
+
+/*LOGO*/
+header img {
+    height: 120px;
+    width: auto;
+    max-width: 100%;
+}
+
+/* MENÚ */
+.menu {
+    list-style: none;
+    display: flex; /* Menú en línea por defecto */
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Alineación del menú en dispositivos grandes */
+.menu {
+    margin-left: auto; 
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ff5733;
+}
+
+/* MENÚ HAMBURGUESA (RESPONSIVO) */
+.menu-hamburguesa {
+    display: none; /* OcultO el ícono en pantallas grandes */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+    height: 20px;
+    justify-content: space-between;
+    z-index: 999; /* para que el menú hamburguesa esté por encima del encabezado xq sino me lo tapa */
+}
+
+.menu-hamburguesa span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 4px;
+}
+
+/* Estilos cuando la pantalla es pequeña */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Oculto el menú en pantallas pequeñas */
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        top: 60px; /* Coloco el menú abajo del encabezado */
+        left: 0;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 998; /* para que el menú esté por debajo del menú hamburguesa */
+    }
+
+    .menu.show {
+        display: flex; /* muestra el menú cuando está activo */
+    }
+
+    .menu li {
+        text-align: center;
+    }
+
+    .menu-hamburguesa {
+        display: flex; /* muestra el ícono del menú hamburguesa */
+    }
+}
+
+/* TÍTULO ENTRE LOGO Y MENÚ */
+.titulo-servicios {
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    font-size: 32px; 
+    font-weight: bold;
+    text-align: left; /* a la izquierda */
+    flex-grow: 1;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+}
+
+/* ESTILO PARA TITULO CON MOVIMIENTO */
+.nuevo-titulo {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    font-size: 40px;
+    font-weight: normal;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    color: red;
+    position: relative;
+    top: -100px;
+    animation: slideDown 2s ease-out forwards;
+}
+
+/* Animación para que el título baje desde la parte superior */
+@keyframes slideDown {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}

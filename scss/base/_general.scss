@@ -1,80 +1,16 @@
-// _general.scss
 
-@use 'variables' as *;
-
-
-// Estilos generales
-
-body {
-    font-family: $font-secondary;
-    color: $color-text;
-    background-color: $color-background;
+/* GENERAL */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-// Estilos del header
+body {
+    font-family: Arial, sans-serif;
+}
+
+/*CONTENEDOR PRINCIPAL DE HEADER*/
 header {
-    background-color: $color-primary;
-    padding: 20px 0;
-    height: $header-height;
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    img {
-        width: 100px;
-    }
-
-    .titulo-servicios {
-        font-family: $font-primary;
-        font-size: 2rem;
-        color: $color-background;
-    }
-}
-
-// Estilos del menú
-.menu {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-
-    li {
-        display: inline-block;
-    }
-
-    a {
-        text-decoration: none;
-        color: $color-text;
-
-        &:hover {
-            color: $color-link-hover;
-        }
-    }
-}
-
-// Estilos para el footer
-footer {
-    background-color: $color-footer-background;
-    padding: 20px;
-    text-align: center;
-
-    .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-
-        a {
-            text-decoration: none;
-            color: $color-text;
-
-            &:hover {
-                color: $color-link;
-            }
-        }
-    }
+    width: 100%;
 }
