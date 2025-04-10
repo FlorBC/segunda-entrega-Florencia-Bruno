@@ -1,0 +1,49 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+/* Estilo para el título de "Nuestro Equipo" */
+.titulo-equipo {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+}
+
+/* Estilo para la grilla de equipo */
+.equipo-grilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
+    width: 80%;
+
+    .miembro {
+        text-align: center;
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: normal;
+        }
+    }
+}
+
+/* Estilo para la sección "Quiénes Somos" */
+.quienes-somos {
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: center;
+        margin: 20px auto;
+        width: 80%;
+    }
+}

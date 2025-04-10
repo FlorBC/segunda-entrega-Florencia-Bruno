@@ -1,0 +1,15 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.social-links {
+    a {
+        color: $secondary-color;
+        text-decoration: none;
+        font-size: 24px;
+        @include transition(color, 0.3s ease);
+
+        &:hover {
+            color: $highlight-color;
+        }
+    }
+}

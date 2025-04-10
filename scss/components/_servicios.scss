@@ -1,0 +1,38 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+/* SECCIÓN SERVICIOS */
+.servicios {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: center;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    gap: 10px;
+    padding-bottom: 20px;
+
+    h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: red;
+    }
+
+    img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+}

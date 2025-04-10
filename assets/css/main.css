@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /* Reset */
 * {
   margin: 0;
@@ -41,11 +40,9 @@ header img {
   margin: 0;
   margin-left: auto;
 }
-
 .menu li {
   display: inline;
 }
-
 .menu a {
   text-decoration: none;
   color: white;
@@ -53,7 +50,6 @@ header img {
   font-weight: bold;
   transition: color 0.3s;
 }
-
 .menu a:hover {
   color: #ff5733;
 }
@@ -69,7 +65,6 @@ header img {
   justify-content: space-between;
   z-index: 999;
 }
-
 .menu-hamburguesa span {
   display: block;
   width: 30px;
@@ -93,20 +88,16 @@ header img {
     border-radius: 10px;
     z-index: 998;
   }
-
   .menu.show {
     display: flex;
   }
-
   .menu li {
     text-align: center;
   }
-
   .menu-hamburguesa {
     display: flex;
   }
 }
-
 /* TÍTULO ENTRE LOGO Y MENÚ */
 .titulo-servicios {
   color: white;
@@ -141,13 +132,107 @@ header img {
     top: -100px;
     opacity: 0;
   }
-
   100% {
     top: 0;
     opacity: 1;
   }
 }
+.menu a:hover {
+  color: #ff5733;
+}
 
+/* MENÚ HAMBURGUESA (RESPONSIVO) */
+.menu-hamburguesa {
+  display: none;
+  /* OcultO el ícono en pantallas grandes */
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  width: 30px;
+  height: 20px;
+  justify-content: space-between;
+  z-index: 999;
+  /* para que el menú hamburguesa esté por encima del encabezado xq sino me lo tapa */
+}
+
+.menu-hamburguesa span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  border-radius: 4px;
+}
+
+/* Estilos cuando la pantalla es pequeña */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    /* Oculto el menú en pantallas pequeñas */
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 60px;
+    /* Coloco el menú abajo del encabezado */
+    left: 0;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 998;
+    /* para que el menú esté por debajo del menú hamburguesa */
+  }
+  .menu.show {
+    display: flex;
+    /* muestra el menú cuando está activo */
+  }
+  .menu li {
+    text-align: center;
+  }
+  .menu-hamburguesa {
+    display: flex;
+    /* muestra el ícono del menú hamburguesa */
+  }
+}
+/* TÍTULO ENTRE LOGO Y MENÚ */
+.titulo-servicios {
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: left;
+  /* a la izquierda */
+  flex-grow: 1;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ESTILO PARA TITULO CON MOVIMIENTO */
+.nuevo-titulo {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  font-size: 40px;
+  font-weight: normal;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1px;
+  color: red;
+  position: relative;
+  top: -100px;
+  animation: slideDown 2s ease-out forwards;
+}
+
+/* Animación para que el título baje desde la parte superior */
+@keyframes slideDown {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
 /* Estilo para el formulario de contacto */
 .contacto {
   display: flex;
@@ -162,12 +247,10 @@ header img {
   gap: 15px;
   width: 100%;
 }
-
 .contact-form label {
   font-size: 18px;
   font-weight: bold;
 }
-
 .contact-form input,
 .contact-form textarea {
   padding: 10px;
@@ -177,11 +260,9 @@ header img {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
 .contact-form textarea {
   resize: vertical;
 }
-
 .contact-form button {
   background-color: #ccc;
   color: black;
@@ -195,7 +276,6 @@ header img {
   margin: 0 auto;
   display: block;
 }
-
 .contact-form button:hover {
   background-color: #b8b8b8;
 }
@@ -224,13 +304,13 @@ header img {
   padding: 20px;
   background: linear-gradient(to right, #ff0000, #ffffff);
 }
-
 .galeria-imagenes .imagenes-portafolio .imagen-item img {
   width: 100%;
   height: auto;
   max-width: 300px;
   border-radius: 10px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* GRILLA DE VIDEOS */
@@ -242,7 +322,6 @@ header img {
   padding: 20px;
   background: linear-gradient(to right, #ff0000, #ffffff);
 }
-
 .galeria-videos .videos-portafolio .video-item iframe {
   width: 100%;
   height: 200px;
@@ -267,19 +346,17 @@ header img {
   margin: 0 auto;
   width: 80%;
 }
-
 .equipo-grilla .miembro {
   text-align: center;
 }
-
 .equipo-grilla .miembro img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-bottom: 10px;
 }
-
 .equipo-grilla .miembro h3 {
   font-size: 18px;
   font-weight: normal;
@@ -311,7 +388,6 @@ header img {
   gap: 10px;
   padding-bottom: 20px;
 }
-
 .servicio h3 {
   font-size: 22px;
   margin-bottom: 10px;
@@ -321,7 +397,6 @@ header img {
   text-decoration: underline;
   text-decoration-color: red;
 }
-
 .servicio img {
   width: 100%;
   max-width: 250px;
@@ -343,11 +418,9 @@ header img {
   align-items: center;
   gap: 20px;
 }
-
 .tarifa .imagen {
   flex-shrink: 0;
 }
-
 .tarifa .descripcion {
   flex-grow: 1;
   font-size: 20px;
@@ -361,9 +434,6 @@ header img {
   font-size: 24px;
   transition: color 0.3s ease;
 }
-
 .social-links a:hover {
   color: #ff5733;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */

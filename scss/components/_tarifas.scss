@@ -1,0 +1,27 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+/* Estilos para la página de tarifas */
+.tarifas {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.tarifa {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .imagen {
+        flex-shrink: 0;
+    }
+
+    .descripcion {
+        flex-grow: 1;
+        font-size: 20px;
+        text-align: left;
+        line-height: 1.6;
+    }
+}
